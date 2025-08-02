@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki Generator</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+<body>
+
+  <h1>Wiki Generator</h1>
+
+  <a href="/">Return to Repositories</a>
+
+  <h3>{{owner}}/{{repository}}</h2>
+
+  <table>
+
+    <tr>
+        <th>Filename</th>
+        <th>Status</th>
+        <th>Description</th>
+    </tr>
+
+    {{#files}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{status}}</td>
+        <td>{{description}}</td>
+    </tr>
+    {{/files}}
+  </table>
+
+  <p>You may need to refresh the page</p>
+
+</body>
+</html>

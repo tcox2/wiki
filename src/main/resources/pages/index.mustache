@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki Generator</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+<body>
+
+  <h1>Wiki Generator</h1>
+
+  <h3>Repositories</h3>
+
+  <table>
+
+    <tr>
+        <th>Owner</th>
+        <th>Repository</th>
+        <th>Status</th>
+        <th>Files</th>
+    </tr>
+
+    {{#repositories}}
+    <tr>
+        <td>{{owner}}</td>
+        <td>{{repository}}</td>
+        <td>{{status}}</td>
+        <td>
+            <a href="{{link}}">
+                {{files}}
+            </a>
+        </td>
+    </tr>
+    {{/repositories}}
+
+  </table>
+
+  <p>You may need to refresh the page</p>
+
+  <h3>Add Repository</h3>
+  <form action="/add" method="get">
+    <label for="url">Github URL:</label>
+    <input type="text" size=200 id="url" name="url">
+    <button type="submit">Add</button>
+  </form>
+
+</body>
+</html>
